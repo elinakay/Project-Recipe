@@ -45,6 +45,27 @@ td {
   width: 10%;
 }
 
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.form-row label {
+  width: 100px;
+}
+
+.form-row input[type="text"],
+.form-row textarea {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+}
+
 /* table */
 
 table {
