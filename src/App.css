@@ -25,7 +25,8 @@ html {
   font-family: 'helvetica neue', sans-serif;
 }
 
-thead th, tfoot th {
+thead th,
+tfoot th {
   font-family: 'Rock Salt';
 }
 
@@ -37,8 +38,8 @@ th {
 
 td {
   letter-spacing: 1px;
-  overflow-x:hidden;
-  overflow-y:hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
   font-size: 12px;
   padding: 10px;
   text-align: center;
@@ -47,7 +48,7 @@ td {
 
 .form-row {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 1em;
 }
 
@@ -72,11 +73,11 @@ table {
   table-layout: fixed;
   width: 100%;
   border-collapse: collapse;
-  overflow:hidden;
+  overflow: hidden;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-.content_td p {
+.content-td p {
   max-width: 100%;
   max-height: 100px;
   overflow-y: auto;
@@ -104,3 +105,29 @@ tbody tr:nth-child(odd) {
 .recipe-list table td:last-child {
   width: 10%;
 }
+
+/* Added CSS for horizontal alignment of input boxes */
+
+.form-row input[type="text"],
+.form-row textarea {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.form-row textarea {
+  resize: none;
+  height: 100px;
+  padding: 5px;
+}
+
+.input-group.textarea-group {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group.textarea-group textarea {
+  height: 100px;
+  resize: vertical;
+}
+
