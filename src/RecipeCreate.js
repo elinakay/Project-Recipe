@@ -47,60 +47,64 @@ function RecipeCreate({ addRecipe }) {
   return (
     <form name="create" onSubmit={handleSubmit}>
       <div className="form-row">
-        <label htmlFor="name">Name:</label>
-        <input
-          type="text"
-          name="name"
-          id="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-        />
-      </div>
-      <div className="form-row">
-        <label htmlFor="cuisine">Cuisine:</label>
-        <input
-          type="text"
-          name="cuisine"
-          id="cuisine"
-          value={cuisine}
-          onChange={(e) => setCuisine(e.target.value)}
-          required
-        />
-      </div>
-      <div className="form-row">
-        <label htmlFor="photo">Photo URL:</label>
-        <input
-          type="text"
-          name="photo"
-          id="photo"
-          value={photo}
-          onChange={(e) => setPhoto(e.target.value)}
-          required
-        />
-        {photoError && <span className="error-message">{photoError}</span>}
-      </div>
-      <div className="form-row">
-        <label htmlFor="ingredients">Ingredients:</label>
-        <textarea
-          name="ingredients"
-          id="ingredients"
-          value={ingredients}
-          onChange={(e) => setIngredients(e.target.value)}
-          required
-        ></textarea>
-      </div>
-      <div className="form-row">
-        <label htmlFor="preparation">Preparation:</label>
-        <textarea
-          name="preparation"
-          id="preparation"
-          value={preparation}
-          onChange={(e) => setPreparation(e.target.value)}
-          required
-        ></textarea>
-      </div>
-      <div className="form-row">
+        <div className="input-group">
+          <label htmlFor="name">Name:</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder="Name"
+            required
+          />
+        </div>
+        <div className="input-group">
+          <label htmlFor="cuisine">Cuisine:</label>
+          <input
+            type="text"
+            name="cuisine"
+            id="cuisine"
+            value={cuisine}
+            onChange={(e) => setCuisine(e.target.value)}
+            placeholder="Cuisine"
+            required
+          />
+        </div>
+        <div className="input-group">
+          <label htmlFor="photo">Photo URL:</label>
+          <input
+            type="text"
+            name="photo"
+            id="photo"
+            value={photo}
+            onChange={(e) => setPhoto(e.target.value)}
+            placeholder="Photo URL"
+            required
+          />
+        </div>
+        <div className="input-group textarea-group">
+          <label htmlFor="ingredients">Ingredients:</label>
+          <textarea
+            name="ingredients"
+            id="ingredients"
+            value={ingredients}
+            onChange={(e) => setIngredients(e.target.value)}
+            placeholder="Ingredients"
+            required
+          ></textarea>
+        </div>
+        <div className="input-group textarea-group">
+          <label htmlFor="preparation">Preparation:</label>
+          <textarea
+            name="preparation"
+            id="preparation"
+            value={preparation}
+            onChange={(e) => setPreparation(e.target.value)}
+            placeholder="Preparation"
+            required
+          ></textarea>
+        </div>
         <button type="submit">Create</button>
       </div>
     </form>
@@ -108,4 +112,5 @@ function RecipeCreate({ addRecipe }) {
 }
 
 export default RecipeCreate;
+
 
