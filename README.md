@@ -1,4 +1,4 @@
-#### Recipe Tracking App
+### Recipe Tracking App Repository
 
 This repository contains a web application for managing and sharing delicious food recipes. It allows users to view a list of recipes, add new recipes, and delete existing ones. The application is built using React.js and styled with CSS.
 
